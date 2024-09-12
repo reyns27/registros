@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface estudiantes {
     nombre: string;
     apellido: string;
@@ -106,7 +108,7 @@ export default function Page() {
                                         <td className="border border-slate-600 text-center">{item.fecha}</td>
                                         <td className="border border-slate-600 text-center">{item.grado}</td>
                                         <td className="border border-slate-600 flex justify-center gap-2">
-                                            <button className="bg-blue-600 hover:bg-blue-700 text-white rounded-md p-2 font-bold">Detalle</button>
+                                            <Link href={`estudiantes/${item.nombre}`} className="bg-blue-600 hover:bg-blue-700 text-white rounded-md p-2 font-bold">Detalles</Link>
                                             <button className="bg-green-600 hover:bg-green-700 text-white rounded-md p-2 font-bold">Editar</button>
                                             <button className="bg-red-600 hover:bg-red-700 text-white rounded-md p-2 font-bold">Eliminar</button>
                                         </td>
